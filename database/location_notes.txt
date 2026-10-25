@@ -1,0 +1,5 @@
+StayFinder location update
+
+The project filter and owner listing form use the 74 barangay names supplied in the project requirements.
+
+Important: the supplied list contains 74 names, while Cabanatuan City has 89 official barangays according to the Philippine Statistics Authority. Do not assume the missing 15; add them only if the project requirements are updated.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="52" viewBox="0 0 210 52" role="img" aria-labelledby="title desc">
+  <title id="title">StayFinder</title>
+  <desc id="desc">StayFinder house and location logo</desc>
+  <rect width="210" height="52" fill="none"/>
+  <path d="M10 25.5 25 12l15 13.5v15H10z" fill="#1268a8"/>
+  <path d="M18 40.5V29h14v11.5" fill="#ffffff"/>
+  <path d="M25 8 43 24h-7.5L25 14.5 14.5 24H7z" fill="#123b5d"/>
+  <circle cx="25" cy="34" r="2" fill="#1268a8"/>
+  <text x="51" y="34" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#123b5d">Stay</text>
+  <text x="105" y="34" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#1268a8">Finder</text>
+</svg>

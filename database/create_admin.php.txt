@@ -1,0 +1,21 @@
+<?php
+// DEVELOPMENT HELPER ONLY.
+// Run this from the command line or temporarily through localhost,
+// then DELETE this file after creating the admin account.
+
+require_once __DIR__ . '/../config/database.php';
+
+$fullName = 'System Administrator';
+$email = 'admin@renthome.local';
+$plainPassword = 'ChangeThisAdminPassword!2026';
+
+$hash = password_hash($plainPassword, PASSWORD_DEFAULT);
+
+$stmt = $pdo->prepare(
+    'INSERT INTO users (full_name, email, password, role, status)
+     VALUES (?, ?, ?, "admin", "active")'
+);
+
+$stmt->execute([$fullName, $email, $hash]);
+
+echo "Admin created. DELETE this file after use.";

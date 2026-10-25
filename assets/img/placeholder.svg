@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#e8eef4"/>
+<path d="M260 500l170-180 120 120 100-110 220 170H260z" fill="#b7c9d8"/>
+<circle cx="850" cy="250" r="70" fill="#c7d6e2"/>
+<text x="600" y="600" text-anchor="middle" font-family="Arial" font-size="36" fill="#60788d">RentHome Property</text>
+</svg>
