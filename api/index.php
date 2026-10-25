@@ -2,21 +2,23 @@
 <?php
 declare(strict_types=1);
 
-// Project root: one level above the api folder.
 $projectRoot = dirname(__DIR__);
 chdir($projectRoot);
 
-// Keep the existing API test endpoint working when
-// no page has been requested through the router.
-$route = $_GET['__route'] ?? '';
+$route = (string) ($_GET['__route'] ?? '');
 
+// Opening the website root should load the homepage.
 if ($route === '') {
+    $route = 'index.php';
+}
+
+// Keep the API test endpoint available.
+if ($route === 'api/index.php') {
     echo 'RentHome PHP is working!';
     exit;
 }
 
-// Only allow public root pages and the admin/owner pages.
-$route = str_replace('\\', '/', (string) $route);
+$route = str_replace('\\', '/', $route);
 
 if (
     str_contains($route, '..') ||
@@ -62,5 +64,4 @@ if (
     exit('Page not found.');
 }
 
-// Execute the requested PHP page.
 require $file;
