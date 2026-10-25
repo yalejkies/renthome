@@ -8,11 +8,15 @@
   },
   "routes": [
     {
-      "src": "^/(assets|uploads|certs)/(.*)$",
-      "dest": "/$1/$2"
+      "src": "^/api/index\\.php$",
+      "dest": "/api/index.php"
     },
     {
-      "src": "^/(.*)$",
+      "src": "^/$",
+      "dest": "/api/index.php?__route=index.php"
+    },
+    {
+      "src": "^/(.*\\.php)$",
       "dest": "/api/index.php?__route=$1"
     }
   ]
