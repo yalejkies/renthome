@@ -1,13 +1,19 @@
 <?php
 declare(strict_types=1);
 
-const BASE_URL = '/renthome';
+define('BASE_URL', getenv('VERCEL') === '1' ? '' : '/renthome');
 const MAX_UPLOAD_SIZE = 5 * 1024 * 1024; // 5 MB
 const MAX_PROPERTY_IMAGES = 8;
 
 function base_url(string $path = ''): string
 {
-    return BASE_URL . ($path !== '' ? '/' . ltrim($path, '/') : '');
+    $base = rtrim(BASE_URL, '/');
+
+    if ($path !== '') {
+        return $base . '/' . ltrim($path, '/');
+    }
+
+    return $base !== '' ? $base . '/' : '/';
 }
 
 /**
